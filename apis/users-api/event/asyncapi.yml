@@ -1,0 +1,39 @@
+asyncapi: 2.0.0
+
+tags:
+  - name: History
+
+info:
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: History
+  version: 1.0.0
+  description: |
+    Update consent of a user
+
+components:
+  messages:
+    ConsentUpdate:
+      name: ConsentUpdateEvent
+      title: Consent of a user was updated
+      summary: Consent of a user was updated
+      description: |
+        Consent of a user was updated
+      schemaFormat: 'application/vnd.apache.avro;version=1.9.0'
+      payload:
+        - $ref: "schemas/ConsentUpdateEvent.avsc"
+
+channels:
+  vw.preference.center.from.users:
+    description: This topic contains information related to the users
+    publish:
+      summary: Publish notification to others about users events
+      description: Publish users messages
+      operationId: users
+      bindings:
+        kafka:
+          bindingVersion: 'latest'
+      message:
+        oneOf:
+          - $ref: '#/components/messages/ConsentUpdate'

@@ -1,0 +1,31 @@
+{
+    "name": "ConsentUpdateEvent",
+    "type": "record",
+    "doc": "Consent of a user",
+    "namespace": "com.vw.preference.center.users.consent.v1",
+    "subject": "preference.center.users.consent.v1.ConsentUpdateEvent",
+    "fields": [
+        {
+            "name": "user_id",
+            "type": "string",
+            "doc": "User id"
+        },
+        {
+            "name": "consent_id",
+            "type": {
+                "type": "enum",
+                "name": "ConsentIds",
+                "symbols": [
+                    "SMS_NOTIFICATIONS",
+                    "EMAIL_NOTIFICATIONS"
+                ],
+                "doc": "Consent id values"
+            }
+        },
+        {
+            "name": "enabled",
+            "type": "boolean",
+            "doc": "Indicates whether the consent is enabled"
+        }
+    ]
+}

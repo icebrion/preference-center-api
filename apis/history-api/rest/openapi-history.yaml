@@ -1,0 +1,44 @@
+openapi: 3.0.1
+info:
+  title: History API
+  version: 1.0.0
+  description: API for managing history data
+
+paths:
+  /consents/{userId}:
+    get:
+      operationId: getAllConsentsByUser
+      summary: Get all consents by user ID
+      tags:
+        - consents
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Consents found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsentResponse'
+        '404':
+          description: Consents not found
+
+components:
+  schemas:
+    ConsentResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          enum:
+            - SMS_NOTIFICATIONS
+            - EMAIL_NOTIFICATIONS
+        enabled:
+          type: boolean
+
+tags:
+  - consents
