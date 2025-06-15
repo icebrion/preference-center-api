@@ -50,8 +50,8 @@
                             <goal>schema</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/apis/users-api/event/schemas</sourceDirectory>
-                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                            <sourceDirectory>apis/users-api/event/schemas</sourceDirectory>
+                            <outputDirectory>src/main/java</outputDirectory>
                             <stringType>String</stringType>
                         </configuration>
                     </execution>
