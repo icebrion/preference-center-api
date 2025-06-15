@@ -29,7 +29,7 @@ channels:
     description: This topic contains information related to the users
     publish:
       summary: Publish notification to others about users events
-      description: Publish users messages
+      description: Publish users events
       operationId: users
       bindings:
         kafka:
