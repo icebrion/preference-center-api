@@ -6,7 +6,7 @@
 
     <groupId>com.github.icebrion</groupId>
     <artifactId>preference-center-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>Preference Center APIS</name>
@@ -16,7 +16,7 @@
     <build>
         <resources>
             <resource>
-                <directory>avro</directory>
+                <directory>apis/users-api/event/schemas</directory>
                 <includes>
                     <include>**/*.avsc</include>
                 </includes>
