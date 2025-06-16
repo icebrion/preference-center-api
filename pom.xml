@@ -21,6 +21,18 @@
                     <include>**/*.avsc</include>
                 </includes>
             </resource>
+            <resource>
+                <directory>apis/users-api/rest</directory>
+                <includes>
+                    <include>openapi-users.yaml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>apis/history-api/rest</directory>
+                <includes>
+                    <include>openapi-history.yaml</include>
+                </includes>
+            </resource>
         </resources>
     </build>
 </project>
